@@ -5,14 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <title>Tràn bộ nhớ</title>
+  <title>Em nhớ anh!</title>
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-  <h1>Anh có điều muốn nói</h1>
-  <button id="playButton" onclick="generateRandomNotifications()">Nhấn đây nè</button>
+  <h1>Em có điều muốn nói...</h1>
+  <button id="playButton" onclick="generateRandomNotifications()">Nhấn vào đây nè 🐇</button>
+   <script>
+    // Khi hiệu ứng gõ chữ hoàn thành (sau 5s, 4s animation + 1s delay), hiển thị nút
+    window.onload = function() {
+      // Thời gian cần để hoàn thành hiệu ứng gõ chữ
+      setTimeout(function() {
+        document.getElementById('playButton').classList.add('show');
+      }, 5000);  // 5 giây (thời gian gõ chữ hoàn thành)
+    }
+
+    // Hàm xử lý sự kiện khi nhấn nút
+    function generateRandomNotifications() {
+      alert("Nút đã được nhấn!");
+      // Bạn có thể thêm hành động cho nút tại đây
+    }
+  </script>
   <div class="final-message" id="finalMessage" onclick="redirectToNewPage()">
     <p id="text1"></p>
     <p id="text2"></p>
