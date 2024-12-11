@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
 html, body {
   margin: 0;
   padding: 0;
@@ -40,6 +41,7 @@ h1 {
     border-color: transparent;
   }
 }
+
 a {
   position: fixed;
   bottom: 0;
@@ -47,6 +49,7 @@ a {
   font-size: 20px;
   color: #e77f7f;
 }
+
 button {
   position: absolute;
   z-index: 1;
@@ -58,25 +61,24 @@ button {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  display: none; /* Ẩn button ban đầu */
-  transition: opacity 1s ease-in-out; /* Thêm hiệu ứng mờ dần */
+  display: none;
+  transition: opacity 1s ease-in-out;
 }
 
-/* Hiệu ứng hover cho button */
 button:hover {
   background-color: #ac595e;
 }
 
-/* Hiển thị button khi có class 'show' */
 button.show {
   display: inline-block;
-  opacity: 1; /* Đảm bảo rằng button có thể mờ dần khi xuất hiện */
+  opacity: 1;
 }
- h1::after {
-      content: "";  /* Emoji con heo */
-      font-size: 50px;
-      margin-left: 10px;
-    }
+
+h1::after {
+  content: "";
+  font-size: 50px;
+  margin-left: 10px;
+}
 
 .notification {
   position: absolute;
@@ -145,7 +147,6 @@ button.show {
     opacity: 0;
     transform: scale(0.5);
   }
-
   to {
     opacity: 1;
     transform: scale(1);
@@ -154,7 +155,7 @@ button.show {
 
 .final-message {
   position: fixed;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
   z-index: 999;
   font-size: 30px;
   font-weight: bold;
@@ -162,6 +163,7 @@ button.show {
   display: none;
   animation: fadeIn 2s ease-in-out;
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -175,11 +177,62 @@ button.show {
 
 #text1,
 #text2 {
-	position: absolute;
-	top: 45%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: rgb(247, 75, 104);
-	font-family: "Raleway", sans-serif;
-	font-size: 35pt;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(247, 75, 104);
+  font-family: "Raleway", sans-serif;
+  font-size: 35pt;
+}
+
+/* Media Queries for Responsiveness */
+
+/* On small screens, adjust the font sizes */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+    top: 20px;
+  }
+
+  #text1,
+  #text2 {
+    font-size: 25pt;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .notification {
+    width: 200px;
+    height: 140px;
+  }
+
+  .notification-header {
+    padding: 5px;
+  }
+}
+
+/* On very small screens, adjust further */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  #text1,
+  #text2 {
+    font-size: 20pt;
+  }
+
+  button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .notification {
+    width: 180px;
+    height: 120px;
+  }
 }
