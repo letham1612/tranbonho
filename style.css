@@ -147,6 +147,7 @@ h1::after {
     opacity: 0;
     transform: scale(0.5);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -155,7 +156,7 @@ h1::after {
 
 .final-message {
   position: fixed;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); 
   z-index: 999;
   font-size: 30px;
   font-weight: bold;
@@ -163,7 +164,6 @@ h1::after {
   display: none;
   animation: fadeIn 2s ease-in-out;
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -177,62 +177,26 @@ h1::after {
 
 #text1,
 #text2 {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(247, 75, 104);
-  font-family: "Raleway", sans-serif;
-  font-size: 35pt;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: rgb(247, 75, 104);
+	font-family: "Raleway", sans-serif;
+	font-size: 35pt;
 }
 
-/* Media Queries for Responsiveness */
-
-/* On small screens, adjust the font sizes */
+/* Điều chỉnh cho các màn hình nhỏ hơn */
 @media (max-width: 768px) {
   h1 {
-    font-size: 30px;
-    top: 20px;
-  }
-
-  #text1,
-  #text2 {
-    font-size: 25pt;
-  }
-
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-  }
-
-  .notification {
-    width: 200px;
-    height: 140px;
-  }
-
-  .notification-header {
-    padding: 5px;
+    font-size: 40px; /* Kích thước phông chữ nhỏ hơn cho màn hình trung bình */
+    margin-left: 20px; /* Điều chỉnh margin cho màn hình trung bình */
   }
 }
 
-/* On very small screens, adjust further */
 @media (max-width: 480px) {
   h1 {
-    font-size: 25px;
-  }
-
-  #text1,
-  #text2 {
-    font-size: 20pt;
-  }
-
-  button {
-    padding: 8px 15px;
-    font-size: 14px;
-  }
-
-  .notification {
-    width: 180px;
-    height: 120px;
+    font-size: 30px; /* Kích thước phông chữ nhỏ hơn cho màn hình nhỏ */
+    margin-left: 20px; /* Điều chỉnh margin cho màn hình nhỏ */
   }
 }
