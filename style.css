@@ -188,15 +188,40 @@ h1::after {
 
 /* Media Queries for Responsiveness */
 
-/* On small screens, adjust the font sizes */
+/* On medium screens like tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 40px;
+    top: 25px;
+  }
+
+  #text1, #text2 {
+    font-size: 30pt;
+  }
+
+  button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+
+  .notification {
+    width: 220px;
+    height: 150px;
+  }
+
+  .notification-header {
+    padding: 5px;
+  }
+}
+
+/* On small screens like phones (max-width: 768px) */
 @media (max-width: 768px) {
   h1 {
     font-size: 30px;
     top: 20px;
   }
 
-  #text1,
-  #text2 {
+  #text1, #text2 {
     font-size: 25pt;
   }
 
@@ -215,14 +240,13 @@ h1::after {
   }
 }
 
-/* On very small screens, adjust further */
+/* On very small screens (max-width: 480px) */
 @media (max-width: 480px) {
   h1 {
     font-size: 25px;
   }
 
-  #text1,
-  #text2 {
+  #text1, #text2 {
     font-size: 20pt;
   }
 
